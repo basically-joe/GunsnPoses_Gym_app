@@ -64,9 +64,9 @@ end
 #     SqlRunner.run(sql, values)
 #   end
 #
-#   def self.delete_all
-#     sql = "DELETE FROM clients"
-#     SqlRunner.run(sql)
-#   end
-#
+  def self.delete_all
+    sql = "DELETE FROM clients"
+    SqlRunner.run(sql)
+  end
+
 end

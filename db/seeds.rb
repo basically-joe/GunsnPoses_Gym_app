@@ -3,6 +3,7 @@ require_relative("../models/client.rb")
 require("pry")
 
 Event.delete_all()
+Client.delete_all()
 
 event1 = Event.new({
   "title" => "Zoomba",
