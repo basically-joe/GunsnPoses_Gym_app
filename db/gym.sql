@@ -11,7 +11,8 @@ type VARCHAR(255)
 
 CREATE TABLE clients (
   id SERIAL8 PRIMARY KEY,
-  name VARCHAR(255),
+  first_name VARCHAR(255),
+  last_name VARCHAR(255),
   age INT4
 );
 
