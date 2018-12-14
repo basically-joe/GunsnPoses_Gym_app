@@ -1,6 +1,8 @@
 require_relative("../models/event.rb")
 require("pry")
 
+Event.delete_all()
+
 event1 = Event.new({
   "title" => "Zoomba",
   "time_slot" => "09:00",

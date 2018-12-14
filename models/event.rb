@@ -41,4 +41,9 @@ class Event
     return Event.new(results.first)
   end
 
+  def self.delete_all
+    sql = "DELETE FROM events"
+    SqlRunner.run(sql)
+  end
+
 end
