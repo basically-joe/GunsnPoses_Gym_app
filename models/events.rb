@@ -9,4 +9,21 @@ class Event
     @type = ['type']
   end
 
+  def save()
+    sql = "INSERT INTO events
+    (
+      title,
+      time_slot,
+      type
+    )
+    VALUES
+    (
+      $1, $2, $3
+    )
+    RETURNING id"
+    values = [@title, @time_slot, @type]
+    results = SqlRunner.run(sql, values)
+    @id = results.first()['id'].to_i
+  end
+
 end
