@@ -3,12 +3,13 @@ require_relative( '../db/sql_runner' )
 class Event
 
   attr_reader :id
-  attr_accessor :title, :time_slot, :type
+  attr_accessor :title, :time_slot, :event_date, :type
 
   def initialize(options)
     @id = options['id'].to_i if options['id']
     @title = options['title']
     @time_slot = options['time_slot']
+    @event_date = options['event_date']
     @type = options['type']
   end
 
@@ -17,14 +18,15 @@ class Event
     (
       title,
       time_slot,
+      event_date,
       type
     )
     VALUES
     (
-      $1, $2, $3
+      $1, $2, $3, $4
     )
     RETURNING id"
-    values = [@title, @time_slot, @type]
+    values = [@title, @time_slot, @event_date, @type]
     results = SqlRunner.run(sql, values)
     @id = results.first()['id'].to_i
   end
@@ -48,13 +50,14 @@ class Event
       (
         title,
         time_slot,
+        event_date,
         type
       ) =
       (
-        $1, $2, $3
+        $1, $2, $3, $4
       )
-      WHERE id = $4"
-      values = [@title, @time_slot, @type, @id]
+      WHERE id = $5"
+      values = [@title, @time_slot, @event_date, @type, @id]
       SqlRunner.run(sql, values)
   end
 

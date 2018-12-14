@@ -6,6 +6,7 @@ CREATE TABLE events (
 id SERIAL8 PRIMARY KEY,
 title VARCHAR(255),
 time_slot VARCHAR(255),
+event_date VARCHAR(255),
 type VARCHAR(255)
 );
 
