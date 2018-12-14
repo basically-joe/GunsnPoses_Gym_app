@@ -43,6 +43,9 @@ event5 = Event.new({
 
 event5.save()
 
+event1.title = "Boxercise"
+event1.update
+
 # client1 = Client.new({
 #   "first_name" => "Joe",
 #   "last_name" => "McColl",
