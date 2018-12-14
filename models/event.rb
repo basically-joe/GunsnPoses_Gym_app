@@ -2,6 +2,7 @@ require_relative( '../db/sql_runner' )
 
 class Event
 
+  attr_reader :id
   attr_accessor :title, :time_slot, :type
 
   def initialize(options)

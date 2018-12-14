@@ -18,6 +18,6 @@ CREATE TABLE clients (
 
 CREATE TABLE bookings (
   id SERIAL8 PRIMARY KEY,
-  events_id INT4 REFERENCES events(id),
-  bookings_id INT4 REFERENCES events(id)
+  event_id INT4 REFERENCES events(id) ON DELETE CASCADE,
+  client_id INT4 REFERENCES clients(id) ON DELETE CASCADE
 );

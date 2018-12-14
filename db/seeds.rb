@@ -1,9 +1,10 @@
-require_relative("../models/event.rb")
-require_relative("../models/client.rb")
+require_relative("../models/event")
+require_relative("../models/client")
+require_relative("../models/booking")
 require("pry")
 
-Event.delete_all()
-Client.delete_all()
+# Event.delete_all()
+# Client.delete_all()
 
 event1 = Event.new({
   "title" => "Zoomba",
@@ -45,8 +46,8 @@ event5 = Event.new({
 
 event5.save()
 
-event1.title = "Boxercise"
-event1.update
+# event1.title = "Boxercise"
+# event1.update
 
 client1 = Client.new({
   "first_name" => "Joe",
@@ -96,8 +97,17 @@ client6 = Client.new({
 
 client6.save()
 
-client6.first_name = "JimmityJim"
-client6.update
+# client6.first_name = "JimmityJim"
+# client6.update
+
+booking1 = Booking.new({
+  "event_id" => event1.id,
+  "client_id" => client1.id
+   })
+
+booking1.save()
+
+
 
 binding.pry
 nil

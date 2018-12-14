@@ -2,6 +2,7 @@ require_relative( '../db/sql_runner' )
 
 class Client
 
+  attr_reader :id
   attr_accessor :first_name, :last_name, :age
 
   def initialize(options)
