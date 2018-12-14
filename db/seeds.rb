@@ -142,5 +142,8 @@ booking6 = Booking.new({
 
 booking6.save()
 
+# booking6.event_id = event1.id
+# booking6.update
+
 binding.pry
 nil
