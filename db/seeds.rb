@@ -43,5 +43,15 @@ event5 = Event.new({
 
 event5.save()
 
+# client1 = Client.new({
+#   "first_name" => "Joe",
+#   "last_name" => "McColl",
+#   "age" => "32"
+#   })
+#
+# client1.save()
+
+
+
 binding.pry
 nil

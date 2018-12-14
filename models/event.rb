@@ -41,6 +41,22 @@ class Event
     return Event.new(results.first)
   end
 
+  def update
+      sql = "UPDATE events
+      SET
+      (
+        title,
+        time_slot,
+        type
+      ) =
+      (
+        $1, $2, $3
+      )
+      WHERE id = $4"
+      values = [@title, @time_slot, @type, @id]
+      SqlRunner.run(sql, values)
+  end
+
   def delete()
     sql = "DELETE FROM events
     WHERE id = $1"
