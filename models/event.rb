@@ -2,11 +2,13 @@ require_relative( '../db/sql_runner' )
 
 class Event
 
+  attr_accessor :title, :time_slot, :type
+
   def initialize(options)
     @id = options['id'].to_i if options['id']
-    @title = options ['title']
-    @time_slot = ['time_slot']
-    @type = ['type']
+    @title = options['title']
+    @time_slot = options['time_slot']
+    @type = options['type']
   end
 
   def save()
