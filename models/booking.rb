@@ -28,18 +28,17 @@ class Booking
   end
 
   def self.all()
-    sql = "SELECT * FROM events"
+    sql = "SELECT * FROM bookings"
     results = SqlRunner.run( sql )
-    return results.map { |hash| Event.new( hash ) }
+    return results.map { |hash| Booking.new( hash ) }
   end
 
-  # def self.find(id)
-  #   sql = "SELECT * FROM events WHERE id = $1"
-  #   values = [id]
-  #   results = SqlRunner.run(sql, values)
-  #   return Event.new(results.first)
-  # end
-  #
+  def self.find(id)
+    sql = "SELECT * FROM bookings WHERE id = $1"
+    values = [id]
+    results = SqlRunner.run(sql, values)
+    return Booking.new(results.first)
+
   # def update
   #     sql = "UPDATE events
   #     SET
