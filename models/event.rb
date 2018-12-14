@@ -34,4 +34,11 @@ class Event
     return results.map { |hash| Event.new( hash ) }
   end
 
+  def self.find(id)
+    sql = "SELECT * FROM events WHERE id = $1"
+    values = [id]
+    results = SqlRunner.run(sql, values)
+    return Event.new(results.first)
+  end
+
 end
