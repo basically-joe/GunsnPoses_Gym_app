@@ -33,7 +33,7 @@ class Booking
     return results.map { |hash| Booking.new( hash ) }
   end
 
-  def self.find(id)
+  def self.find(id) #e.g Booking.find(1)
     sql = "SELECT * FROM bookings WHERE id = $1"
     values = [id]
     results = SqlRunner.run(sql, values)
@@ -55,7 +55,7 @@ class Booking
       SqlRunner.run(sql, values)
     end
 
-    def event()
+    def event() # e.g. booking1.event
       sql = "SELECT * FROM events
       WHERE id = $1"
       values = [@event_id]
@@ -63,7 +63,7 @@ class Booking
       return Event.new( results.first )
     end
 
-    def client()
+    def client() # e.g. booking1.client
       sql = "SELECT * FROM clients
       WHERE id = $1"
       values = [@client_id]
@@ -71,7 +71,7 @@ class Booking
       return Client.new( results.first )
     end
 
-    def delete()
+    def delete() # e.g. booking1.delete
       sql = "DELETE FROM events
       WHERE id = $1"
       values = [@id]

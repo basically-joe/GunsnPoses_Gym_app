@@ -35,7 +35,7 @@ class Client
     return results.map { |hash| Client.new( hash ) }
   end
 
-  def self.find(id)
+  def self.find(id) # e.g. Client.find(2)
     sql = "SELECT * FROM clients WHERE id = $1"
     values = [id]
     results = SqlRunner.run(sql, values)
@@ -58,7 +58,7 @@ class Client
       SqlRunner.run(sql, values)
     end
 
-    def events()
+    def events() # eg client1.events
       sql = "SELECT events.*
       FROM events
       INNER JOIN bookings
@@ -69,7 +69,7 @@ class Client
       return client_data.map{ |client| Event.new(client) }
     end
 
-    def delete()
+    def delete() # e.g. client1.delete
       sql = "DELETE FROM clients
       WHERE id = $1"
       values = [@id]
