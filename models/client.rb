@@ -23,7 +23,7 @@ class Client
       $1, $2, $3
     )
     RETURNING id"
-    values = [@]
+    values = [@first_name, @last_name, @age]
     results = SqlRunner.run(sql, values)
     @id = results.first()['id'].to_i
   end
@@ -41,6 +41,22 @@ class Client
 #     return Event.new(results.first)
 #   end
 #
+# def update
+#     sql = "UPDATE events
+#     SET
+#     (
+#       title,
+#       time_slot,
+#       type
+#     ) =
+#     (
+#       $1, $2, $3
+#     )
+#     WHERE id = $4"
+#     values = [@title, @time_slot, @type, @id]
+#     SqlRunner.run(sql, values)
+# end
+#
 #   def delete()
 #     sql = "DELETE FROM events
 #     WHERE id = $1"
@@ -53,4 +69,4 @@ class Client
 #     SqlRunner.run(sql)
 #   end
 #
-# end
+end

@@ -1,4 +1,5 @@
 require_relative("../models/event.rb")
+require_relative("../models/client.rb")
 require("pry")
 
 Event.delete_all()
@@ -46,15 +47,53 @@ event5.save()
 event1.title = "Boxercise"
 event1.update
 
-# client1 = Client.new({
-#   "first_name" => "Joe",
-#   "last_name" => "McColl",
-#   "age" => "32"
-#   })
-#
-# client1.save()
+client1 = Client.new({
+  "first_name" => "Joe",
+  "last_name" => "McColl",
+  "age" => 32
+  })
 
+client1.save()
 
+client2 = Client.new({
+  "first_name" => "Jodie",
+  "last_name" => "Tennant",
+  "age" => 32
+  })
+
+client2.save()
+
+client3 = Client.new({
+  "first_name" => "Kimberly",
+  "last_name" => "Tennant",
+  "age" => 32
+  })
+
+client3.save()
+
+client4 = Client.new({
+  "first_name" => "Jock",
+  "last_name" => "McKay",
+  "age" => 62
+  })
+
+client4.save()
+
+client5 = Client.new({
+  "first_name" => "Sheena",
+  "last_name" => "McKay",
+  "age" => 59
+  })
+
+client5.save()
+
+client6 = Client.new({
+  "first_name" => "Cheryl",
+  "last_name" => "Keenan",
+  "age" => 18
+  })
+
+client6.save()
 
 binding.pry
 nil
