@@ -95,5 +95,8 @@ client6 = Client.new({
 
 client6.save()
 
+client6.first_name = "JimmityJim"
+client6.update
+
 binding.pry
 nil

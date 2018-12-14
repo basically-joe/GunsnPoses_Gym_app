@@ -41,31 +41,31 @@ class Client
     return Client.new(results.first)
   end
 
-# def update
-#     sql = "UPDATE events
-#     SET
-#     (
-#       title,
-#       time_slot,
-#       type
-#     ) =
-#     (
-#       $1, $2, $3
-#     )
-#     WHERE id = $4"
-#     values = [@title, @time_slot, @type, @id]
-#     SqlRunner.run(sql, values)
-# end
-#
+def update
+    sql = "UPDATE clients
+    SET
+    (
+      first_name,
+      last_name,
+      age
+    ) =
+    (
+      $1, $2, $3
+    )
+    WHERE id = $4"
+    values = [@first_name, @last_name, @age, @id]
+    SqlRunner.run(sql, values)
+end
+
 #   def delete()
-#     sql = "DELETE FROM events
+#     sql = "DELETE FROM clients
 #     WHERE id = $1"
 #     values = [@id]
 #     SqlRunner.run(sql, values)
 #   end
 #
 #   def self.delete_all
-#     sql = "DELETE FROM events"
+#     sql = "DELETE FROM clients"
 #     SqlRunner.run(sql)
 #   end
 #
