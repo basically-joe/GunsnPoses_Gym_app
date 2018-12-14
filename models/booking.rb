@@ -63,13 +63,13 @@ class Booking
       return Event.new( results.first )
     end
 
-    # def client()
-    #   sql = "SELECT * FROM clients
-    #   WHERE id = $1"
-    #   values = [@client_id]
-    #   results = SqlRunner.run( sql, values )
-    #   return Client.new( results.first )
-    # end
+    def client()
+      sql = "SELECT * FROM clients
+      WHERE id = $1"
+      values = [@client_id]
+      results = SqlRunner.run( sql, values )
+      return Client.new( results.first )
+    end
 
     def delete()
       sql = "DELETE FROM events

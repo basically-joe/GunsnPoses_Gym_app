@@ -58,6 +58,17 @@ class Event
       SqlRunner.run(sql, values)
   end
 
+  def clients()
+    sql = "SELECT clients.*
+    FROM clients
+    INNER JOIN bookings
+    ON bookings.client_id = clients.id
+    WHERE bookings.event_id = $1"
+    values = [@id]
+    client_data = SqlRunner.run(sql, values)
+    return client_data.map{ |client| Client.new(client) }
+  end
+
   def delete()
     sql = "DELETE FROM events
     WHERE id = $1"
