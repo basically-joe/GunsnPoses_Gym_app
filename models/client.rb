@@ -28,12 +28,12 @@ class Client
     @id = results.first()['id'].to_i
   end
 
-#   def self.all()
-#     sql = "SELECT * FROM events"
-#     results = SqlRunner.run( sql )
-#     return results.map { |hash| Event.new( hash ) }
-#   end
-#
+  def self.all()
+    sql = "SELECT * FROM clients"
+    results = SqlRunner.run( sql )
+    return results.map { |hash| Client.new( hash ) }
+  end
+
 #   def self.find(id)
 #     sql = "SELECT * FROM events WHERE id = $1"
 #     values = [id]
