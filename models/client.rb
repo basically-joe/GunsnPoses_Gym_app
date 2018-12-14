@@ -42,36 +42,47 @@ class Client
     return Client.new(results.first)
   end
 
-def update
+  def update
     sql = "UPDATE clients
     SET
     (
       first_name,
       last_name,
       age
-    ) =
-    (
-      $1, $2, $3
-    )
-    WHERE id = $4"
-    values = [@first_name, @last_name, @age, @id]
-    SqlRunner.run(sql, values)
-end
+      ) =
+      (
+        $1, $2, $3
+      )
+      WHERE id = $4"
+      values = [@first_name, @last_name, @age, @id]
+      SqlRunner.run(sql, values)
+    end
 
-  def delete()
-    sql = "DELETE FROM clients
-    WHERE id = $1"
-    values = [@id]
-    SqlRunner.run(sql, values)
+    def events()
+      sql = "SELECT events.*
+      FROM events
+      INNER JOIN bookings
+      ON bookings.event_id = events.id
+      WHERE bookings.client_id = $1"
+      values = [@id]
+      client_data = SqlRunner.run(sql, values)
+      return client_data.map{ |client| Event.new(client) }
+    end
+
+    def delete()
+      sql = "DELETE FROM clients
+      WHERE id = $1"
+      values = [@id]
+      SqlRunner.run(sql, values)
+    end
+
+    def self.delete_all
+      sql = "DELETE FROM clients"
+      SqlRunner.run(sql)
+    end
+
+    def format_name
+      return "#{@first_name.capitalize} #{@last_name.capitalize}"
+    end
+
   end
-
-  def self.delete_all
-    sql = "DELETE FROM clients"
-    SqlRunner.run(sql)
-  end
-
-  def format_name
-    return "#{@first_name.capitalize} #{@last_name.capitalize}"
-  end
-
-end
