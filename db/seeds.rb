@@ -3,8 +3,8 @@ require_relative("../models/client")
 require_relative("../models/booking")
 require("pry")
 
-# Event.delete_all()
-# Client.delete_all()
+Event.delete_all()
+Client.delete_all()
 
 event1 = Event.new({
   "title" => "Zoomba",
@@ -107,7 +107,40 @@ booking1 = Booking.new({
 
 booking1.save()
 
+booking2 = Booking.new({
+  "event_id" => event2.id,
+  "client_id" => client2.id
+   })
 
+booking2.save()
+
+booking3 = Booking.new({
+  "event_id" => event3.id,
+  "client_id" => client3.id
+   })
+
+booking3.save()
+
+booking4 = Booking.new({
+  "event_id" => event4.id,
+  "client_id" => client4.id
+   })
+
+booking4.save()
+
+booking5 = Booking.new({
+  "event_id" => event5.id,
+  "client_id" => client4.id
+   })
+
+booking5.save()
+
+booking6 = Booking.new({
+  "event_id" => event5.id,
+  "client_id" => client5.id
+   })
+
+booking6.save()
 
 binding.pry
 nil
