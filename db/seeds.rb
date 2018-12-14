@@ -3,6 +3,7 @@ require_relative("../models/client")
 require_relative("../models/booking")
 require("pry")
 
+Booking.delete_all()
 Event.delete_all()
 Client.delete_all()
 
