@@ -34,13 +34,13 @@ class Client
     return results.map { |hash| Client.new( hash ) }
   end
 
-#   def self.find(id)
-#     sql = "SELECT * FROM events WHERE id = $1"
-#     values = [id]
-#     results = SqlRunner.run(sql, values)
-#     return Event.new(results.first)
-#   end
-#
+  def self.find(id)
+    sql = "SELECT * FROM clients WHERE id = $1"
+    values = [id]
+    results = SqlRunner.run(sql, values)
+    return Client.new(results.first)
+  end
+
 # def update
 #     sql = "UPDATE events
 #     SET
