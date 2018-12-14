@@ -17,7 +17,6 @@ event2 = Event.new({
 
 event2.save()
 
-
 event3 = Event.new({
   "title" => "Body Pump",
   "time_slot" => "17:30",

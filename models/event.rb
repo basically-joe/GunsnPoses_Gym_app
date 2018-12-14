@@ -28,4 +28,10 @@ class Event
     @id = results.first()['id'].to_i
   end
 
+  def self.all()
+    sql = "SELECT * FROM events"
+    results = SqlRunner.run( sql )
+    return results.map { |hash| Event.new( hash ) }
+  end
+
 end
