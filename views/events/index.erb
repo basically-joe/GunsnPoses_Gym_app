@@ -1,1 +1,15 @@
-<h1>I'm the events index page</h1>
+<h1>Upcoming classes</h1>
+<table>
+  <tr>
+    <th>Event</th>
+    <th>Date</th>
+    <th>Time</th>
+  </tr>
+  <% for event in @events %>
+  <tr>
+    <td><a href="#"><%= event.title() %></a></td>
+    <td><%= event.event_date() %></td>
+    <td><%= event.time_slot() %></td>
+  </tr>
+  <% end %>
+</table>

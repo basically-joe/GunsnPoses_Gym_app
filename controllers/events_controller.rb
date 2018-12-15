@@ -4,5 +4,6 @@ require_relative( '../models/event' )
 also_reload( '../models/*' )
 
 get "/events" do
-  "hello there events page"
+  @events = Event.all()
+  erb ( :"events/index")
 end
