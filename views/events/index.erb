@@ -7,7 +7,7 @@
   </tr>
   <% for event in @events %>
   <tr>
-    <td><a href="/events"><%= event.title() %></a></td>
+    <td><a href="/events/<%= event.id() %>"><%= event.title() %></a></td>
     <td><%= event.event_date() %></td>
     <td><%= event.time_slot() %></td>
   </tr>
