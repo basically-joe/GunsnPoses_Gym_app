@@ -45,13 +45,13 @@ class Event
   end
 
   def update
-      sql = "UPDATE events
-      SET
-      (
-        title,
-        time_slot,
-        event_date,
-        type
+    sql = "UPDATE events
+    SET
+    (
+      title,
+      time_slot,
+      event_date,
+      type
       ) =
       (
         $1, $2, $3, $4
@@ -59,29 +59,33 @@ class Event
       WHERE id = $5"
       values = [@title, @time_slot, @event_date, @type, @id]
       SqlRunner.run(sql, values)
-  end
+    end
 
-  def clients() # eg event1.clients
-    sql = "SELECT clients.*
-    FROM clients
-    INNER JOIN bookings
-    ON bookings.client_id = clients.id
-    WHERE bookings.event_id = $1"
-    values = [@id]
-    client_data = SqlRunner.run(sql, values)
-    return client_data.map{ |client| Client.new(client) }
-  end
+    def clients() # eg event1.clients
+      sql = "SELECT clients.*
+      FROM clients
+      INNER JOIN bookings
+      ON bookings.client_id = clients.id
+      WHERE bookings.event_id = $1"
+      values = [@id]
+      client_data = SqlRunner.run(sql, values)
+      return client_data.map{ |client| Client.new(client) }
+    end
 
-  def delete() # e.g. event1.delete
-    sql = "DELETE FROM events
-    WHERE id = $1"
-    values = [@id]
-    SqlRunner.run(sql, values)
-  end
+    def event_count() # e.g. event5.event_count
+      return clients.count
+    end
 
-  def self.delete_all
-    sql = "DELETE FROM events"
-    SqlRunner.run(sql)
-  end
+    def delete() # e.g. event1.delete
+      sql = "DELETE FROM events
+      WHERE id = $1"
+      values = [@id]
+      SqlRunner.run(sql, values)
+    end
 
-end
+    def self.delete_all
+      sql = "DELETE FROM events"
+      SqlRunner.run(sql)
+    end
+
+  end
