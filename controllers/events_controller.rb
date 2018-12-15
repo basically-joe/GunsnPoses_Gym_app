@@ -7,3 +7,8 @@ get "/events" do
   @events = Event.all()
   erb ( :"events/index")
 end
+
+get "/events/:id" do
+  @events = Event.find(params['id'].to_i)
+  erb ( :"events/show")
+end
