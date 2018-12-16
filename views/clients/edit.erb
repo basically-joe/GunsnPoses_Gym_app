@@ -1,1 +1,25 @@
-<h1>Edit <%= @clients.format_name %>:</h1>
+<h1>Update the details of <%= @clients.format_name %>:</h1>
+<form action="/clients/<%= @clients.id %> method="post">
+  <div class="form-wrapper">
+
+<div class="form-elements">
+  <label for="first_name">First name:</label>
+  <input type="text" name="first_name" id="first_name" value="<%= @clients.first_name %>"/>
+</div>
+
+<div class="form-elements">
+  <label for="last_name">Last name:</label>
+  <input type="text" name="last_name" id="last_name" value="<%= @clients.last_name %>"/>
+</div>
+
+<div class="form-elements">
+  <label for="age">Age:</label>
+  <input type="text" name="age" id="age" value="<%= @clients.age %>"/>
+</div>
+
+<div class="form-elements">
+  <input type='submit' value="Update client details">
+</div>
+
+  </div>
+</form>
