@@ -10,7 +10,8 @@ get '/bookings' do
   erb ( :"bookings/index" )
 end
 
-get "/bookings/:id" do
-  @bookings = Booking.find(params['id'].to_i)
-  erb ( :"bookings/show")
+get '/bookings/new' do
+  @events = Event.all
+  @clients = Client.all
+  erb(:"bookings/new")
 end
