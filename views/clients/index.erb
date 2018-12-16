@@ -3,12 +3,15 @@
   <tr>
     <th>Name</th>
     <th>Age</th>
+    <th>Modify</th>
+    <th>Remove</th>
   </tr>
   <% for client in @clients %>
   <tr>
     <td><a href="/clients/<%= client.id() %>"><%= client.format_name() %></a></td>
     <td><%= client.age() %></td>
     <td><a href="#">Edit</a></td>
+    <td><a href="#">Delete</a></td>
   </tr>
   <% end %>
 </table>
