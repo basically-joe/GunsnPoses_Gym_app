@@ -33,3 +33,9 @@ post '/events/:id' do
   event.update
   redirect to "/events/#{params['id']}"
 end
+
+post '/events/:id/delete' do
+  event = Event.find(params['id'].to_i)
+  event.delete
+  redirect to '/events'
+end
