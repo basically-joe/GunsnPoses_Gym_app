@@ -24,5 +24,6 @@ get "/events/:id" do
 end
 
 get '/events/:id/edit' do
-  "I'm the edit page for classes"
+  @events = Event.find(params['id'].to_i)
+  erb ( :"events/edit")
 end
