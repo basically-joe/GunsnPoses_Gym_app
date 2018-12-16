@@ -11,8 +11,8 @@
     <td><a href="/clients/<%= client.id() %>"><%= client.format_name() %></a></td>
     <td><%= client.age() %></td>
     <td><a href="/clients/<%= client.id() %>/edit">Edit</a></td>
-    <td><a href="#">Delete</a></td>
+    <td><form action="/clients/<%= client.id() %>/delete" method="POST"><input type="submit" value="Delete"></form></td>
   </tr>
   <% end %>
 </table>
-<a href="/clients/new">Add a new class</a>
+<a href="/clients/new">Register a new client</a>

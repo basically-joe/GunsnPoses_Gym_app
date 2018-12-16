@@ -33,3 +33,9 @@ post '/clients/:id' do
   client.update
   redirect to "/clients/#{params['id']}"
 end
+
+post '/clients/:id/delete' do
+  client = Client.find(params['id'].to_i)
+  client.delete
+  redirect to '/clients'
+end
