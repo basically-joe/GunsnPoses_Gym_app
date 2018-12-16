@@ -5,7 +5,7 @@
   </tr>
   <% @bookings.each do |event| %>
   <tr>
-    <td><a href="#"><%= event.event.title %></a></td>
+    <td><a href="/bookings/<%= event.id%>"><%= event.event.title %></a></td>
   </tr>
   <% end %>
 </table>
