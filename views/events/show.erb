@@ -1,1 +1,6 @@
-<h1><%= @events.title() %> info</h1>
+<h1><%= @events.title() %> client roster</h1>
+<ul>
+  <% @events.clients.each do |client| %>
+  <li><%= client.format_name %></li>
+  <% end %>
+</ul>
