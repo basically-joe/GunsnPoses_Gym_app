@@ -1,5 +1,5 @@
 <h1>Update the details of <%= @clients.format_name %>:</h1>
-<form action="/clients/<%= @clients.id %> method="post">
+<form action="/clients/<%= @clients.id %>" method="post">
   <div class="form-wrapper">
 
 <div class="form-elements">
@@ -14,7 +14,7 @@
 
 <div class="form-elements">
   <label for="age">Age:</label>
-  <input type="text" name="age" id="age" value="<%= @clients.age %>"/>
+  <input type="number" name="age" id="age" value="<%= @clients.age %>"/>
 </div>
 
 <div class="form-elements">
