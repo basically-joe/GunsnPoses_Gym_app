@@ -10,6 +10,7 @@
     <td><a href="/events/<%= event.id() %>"><%= event.title() %></a></td>
     <td><%= event.event_date() %></td>
     <td><%= event.time_slot() %></td>
+    <td><a href="/events/<%= event.id() %>/edit">Edit</a></td>
   </tr>
   <% end %>
 </table>

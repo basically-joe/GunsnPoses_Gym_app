@@ -27,3 +27,9 @@ get '/events/:id/edit' do
   @events = Event.find(params['id'].to_i)
   erb ( :"events/edit")
 end
+
+post '/events/:id' do
+  event = Event.new(params)
+  event.update
+  redirect to "/events/#{params['id']}"
+end
