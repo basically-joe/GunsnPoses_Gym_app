@@ -1,1 +1,15 @@
-<h1>Clients index page</h1>
+<h1>Current client list...</h1>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+  </tr>
+  <% for client in @clients %>
+  <tr>
+    <td><a href="/clients/<%= client.id() %>"><%= client.format_name() %></a></td>
+    <td><%= client.age() %></td>
+    <td><a href="#">Edit</a></td>
+  </tr>
+  <% end %>
+</table>
+<a href="#">Add a new class</a>

@@ -4,6 +4,6 @@ require_relative( '../models/client' )
 also_reload( '../models/*' )
 
 get "/clients" do
-  @clients = Event.all()
+  @clients = Client.all()
   erb ( :"clients/index")
 end
