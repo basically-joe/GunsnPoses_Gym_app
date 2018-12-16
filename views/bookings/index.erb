@@ -1,11 +1,1 @@
 <h1>Bookings index page!!!</h1>
-<table>
-  <tr>
-    <th>Booked classes</th>
-  </tr>
-  <% @bookings.each do |event| %>
-  <tr>
-    <td><a href="/bookings/<%= event.id%>"><%= event.event.title %></a></td>
-  </tr>
-  <% end %>
-</table>
