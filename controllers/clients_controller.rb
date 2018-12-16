@@ -22,3 +22,14 @@ get "/clients/:id" do
   @clients = Client.find(params['id'].to_i)
   erb ( :"clients/show")
 end
+
+get '/clients/:id/edit' do
+  @clients = Client.find(params['id'].to_i)
+  erb ( :"clients/edit")
+end
+
+post '/clients/:id' do
+  client = Client.new(params)
+  client.update
+  redirect to "/clients/#{params['id']}"
+end
