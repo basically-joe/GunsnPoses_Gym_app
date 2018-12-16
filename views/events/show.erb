@@ -1,6 +1,11 @@
 <h1><%= @events.title() %> client roster</h1>
-<ul>
+<table>
+  <tr>
+    <th>Registered clients</th>
+  </tr>
   <% @events.clients.each do |client| %>
-  <li><%= client.format_name %></li>
+  <tr>
+    <td><%= client.format_name %></td>
+  </tr>
   <% end %>
-</ul>
+</table>
