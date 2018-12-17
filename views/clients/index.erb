@@ -1,11 +1,15 @@
 <h1>Current client list...</h1>
+<div class="tables">
 <table>
+  <thead>
   <tr>
     <th>Name</th>
     <th>Age</th>
     <th>Modify</th>
     <th>Remove</th>
   </tr>
+  </thead>
+  <tbody>
   <% for client in @clients %>
   <tr>
     <td><a href="/clients/<%= client.id() %>"><%= client.format_name() %></a></td>
@@ -14,5 +18,7 @@
     <td><form action="/clients/<%= client.id() %>/delete" method="POST"><input type="submit" value="Delete"></form></td>
   </tr>
   <% end %>
+  </tbody>
 </table>
+</div>
 <a href="/clients/new">Register a new client</a>
