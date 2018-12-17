@@ -18,11 +18,11 @@
           </div>
         </td>
         <td><%= client.age() %></td>
-        <td><button type="button" href="/clients/<%= client.id() %>/edit">Edit</button></td>
+        <td><a href="/clients/<%= client.id() %>/edit"><button type="button">Edit</button></a></td>
         <td><form action="/clients/<%= client.id() %>/delete" method="POST"><input type="submit" value="Delete"></form></td>
       </tr>
       <% end %>
     </tbody>
   </table>
 </div>
-<button type="button" href="/clients/new">Register a new client</button>
+<a href="/clients/new"><button type="button">Register a new client</button></a>
