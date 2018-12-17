@@ -1,8 +1,7 @@
-<h1><%= @events.title() %> client roster</h1>
+<h1><%= @events.title() %> (max <%= @events.capacity() %>)</h1>
 <table>
   <tr>
     <th>Registered clients</th>
-    <th>Modify</th>
   </tr>
   <% @events.clients.each do |client| %>
   <tr>
