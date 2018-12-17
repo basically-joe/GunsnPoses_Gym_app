@@ -79,7 +79,7 @@ class Event
       return clients.count
     end
 
-    def does_event_have_capacity()
+    def event_has_capacity()
       if @capacity > event_count()
         return true
       else

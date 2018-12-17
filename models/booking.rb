@@ -1,4 +1,5 @@
 require_relative( '../db/sql_runner' )
+require_relative( 'event' )
 
 class Booking
 
@@ -25,6 +26,11 @@ class Booking
     values = [@event_id, @client_id]
     results = SqlRunner.run(sql, values)
     @id = results.first()['id'].to_i
+  end
+
+  def book_if_capacity
+      if event.event_has_capacity()
+        save()
   end
 
   def self.all()
