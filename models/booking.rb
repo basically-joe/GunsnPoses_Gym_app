@@ -28,10 +28,11 @@ class Booking
     @id = results.first()['id'].to_i
   end
 
-  def book_if_capacity
-      if event.event_has_capacity() == true
-        save()
-  end
+  # def book_if_capacity
+  #     if event.event_has_capacity() == true
+  #       save()
+  #     end
+  # end
 
   def self.all()
     sql = "SELECT * FROM bookings"
