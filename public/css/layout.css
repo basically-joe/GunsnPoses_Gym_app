@@ -15,13 +15,12 @@ body {
   font-size: 20px;
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
+  background-image: url(/Users/joemccoll/codeclan_work/ruby_project_solo/gym_code/public/images/back_right_orientation.jpg);
 }
 
-header {
-    background-image: url(imgs/reading.jpg);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
 }
 
 section {
