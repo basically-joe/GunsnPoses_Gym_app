@@ -38,6 +38,21 @@ nav {
 
 }
 
+/* hyperlinkable text */
+
+/* a:link,
+a:visited {
+  text-decoration: none;
+  border: 0;
+  color: #ddd;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s; */
+
+  /* a:hover,
+  a:active {
+    color: #888;
+  } */
+
 .main-nav {
   list-style: none;
   float: left;
