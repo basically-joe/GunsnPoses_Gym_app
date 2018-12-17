@@ -32,7 +32,7 @@ end
 post '/events/:id' do
   event = Event.new(params)
   event.update
-  redirect to "/events/#{params['id']}"
+  redirect to "/events"
 end
 
 post '/events/:id/delete' do
