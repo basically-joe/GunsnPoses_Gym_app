@@ -79,6 +79,13 @@ class Event
       return clients.count
     end
 
+    def does_event_have_capacity()
+      if @capacity > event_count()
+        return true
+      else
+        return false
+    end
+
     def delete() # e.g. event1.delete
       sql = "DELETE FROM events
       WHERE id = $1"
