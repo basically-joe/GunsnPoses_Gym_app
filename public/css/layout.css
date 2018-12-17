@@ -11,6 +11,10 @@ body {
     overflow-x: hidden;
 }
 
+section {
+    padding: 10px 0;
+}
+
 /* navigation pain */
 
 .navbar {
