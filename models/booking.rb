@@ -29,7 +29,7 @@ class Booking
   end
 
   def book_if_capacity
-      if event.event_has_capacity()
+      if event.event_has_capacity() == true
         save()
   end
 
