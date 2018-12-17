@@ -8,6 +8,7 @@
 
 html,
 body {
+  /* background-image: url(/Users/joemccoll/codeclan_work/ruby_project_solo/gym_code/public/images/back_right_orientation.jpg); */
   background: linear-gradient(45deg, #49a09d, #5f2c82);
   height: 100%;
   color: #fff;
@@ -16,12 +17,6 @@ body {
   font-size: 20px;
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
-  /* background-image: url(/Users/joemccoll/codeclan_work/ruby_project_solo/gym_code/public/images/back_right_orientation.jpg); */
-}
-
-.row {
-    max-width: 1140px;
-    margin: 0 auto;
 }
 
 section {
@@ -32,9 +27,9 @@ section {
 
 nav {
   background-color: #333;
-  font-size: 80%;
+  font-size: 95%;
   color: #ddd;
-  padding: 50px;
+  padding: 60px;
 
 }
 
@@ -44,7 +39,7 @@ nav {
 .hyperlink a:visited {
   text-decoration:underline;
   border: 0;
-  color: #ddd;
+  color: #5f2c82;
   -webkit-transition: color 0.2s;
   transition: color 0.2s;
 }
