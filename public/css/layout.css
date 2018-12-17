@@ -40,18 +40,19 @@ nav {
 
 /* hyperlinkable text */
 
-/* a:link,
-a:visited {
-  text-decoration: none;
+.hyperlink a:link,
+.hyperlink a:visited {
+  text-decoration:underline;
   border: 0;
   color: #ddd;
   -webkit-transition: color 0.2s;
-  transition: color 0.2s; */
+  transition: color 0.2s;
+}
 
-  /* a:hover,
-  a:active {
-    color: #888;
-  } */
+  .hyperlink a:hover,
+  .hyperlink a:active {
+    color: #fff;
+  }
 
 .main-nav {
   list-style: none;

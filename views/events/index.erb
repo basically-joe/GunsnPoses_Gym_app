@@ -15,7 +15,11 @@
     <tbody>
       <% for event in @events %>
       <tr>
-        <td><a href="/events/<%= event.id() %>"><%= event.title() %></a></td>
+        <td>
+          <div class="hyperlink">
+            <a href="/events/<%= event.id() %>"><%= event.title() %></a>
+          </div>
+        </td>
         <td><%= event.event_date() %></td>
         <td><%= event.time_slot() %></td>
         <td><%= event.type() %></td>
