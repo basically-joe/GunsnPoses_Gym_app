@@ -5,6 +5,7 @@
     <th>Date</th>
     <th>Time</th>
     <th>Type</th>
+    <th>Capacity</th>
     <th>Modify</th>
     <th>Remove</th>
   </tr>
@@ -14,6 +15,7 @@
     <td><%= event.event_date() %></td>
     <td><%= event.time_slot() %></td>
     <td><%= event.type() %></td>
+    <td><%= event.capacity() %></td>
     <td><a href="/events/<%= event.id() %>/edit">Edit</a></td>
     <td><form action="/events/<%= event.id() %>/delete" method="POST"><input type="submit" value="Delete"></form></td>
   </tr>

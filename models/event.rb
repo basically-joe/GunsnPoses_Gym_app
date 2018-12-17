@@ -3,7 +3,7 @@ require_relative( '../db/sql_runner' )
 class Event
 
   attr_reader :id
-  attr_accessor :title, :time_slot, :event_date, :type
+  attr_accessor :title, :time_slot, :event_date, :type, :capacity
 
   def initialize(options)
     @id = options['id'].to_i if options['id']
@@ -11,6 +11,7 @@ class Event
     @time_slot = options['time_slot']
     @event_date = options['event_date']
     @type = options['type']
+    @capacity = options['capacity'].to_i
   end
 
   def save()
@@ -19,14 +20,15 @@ class Event
       title,
       time_slot,
       event_date,
-      type
+      type,
+      capacity
     )
     VALUES
     (
-      $1, $2, $3, $4
+      $1, $2, $3, $4, $5
     )
     RETURNING id"
-    values = [@title, @time_slot, @event_date, @type]
+    values = [@title, @time_slot, @event_date, @type, @capacity]
     results = SqlRunner.run(sql, values)
     @id = results.first()['id'].to_i
   end
@@ -51,13 +53,14 @@ class Event
       title,
       time_slot,
       event_date,
-      type
+      type,
+      capacity
       ) =
       (
-        $1, $2, $3, $4
+        $1, $2, $3, $4, $5
       )
-      WHERE id = $5"
-      values = [@title, @time_slot, @event_date, @type, @id]
+      WHERE id = $6"
+      values = [@title, @time_slot, @event_date, @type, @capacity, @id]
       SqlRunner.run(sql, values)
     end
 

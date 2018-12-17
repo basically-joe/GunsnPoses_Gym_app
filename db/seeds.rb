@@ -11,7 +11,8 @@ event1 = Event.new({
   "title" => "Zoomba",
   "time_slot" => "09:00",
   "event_date" => "07/01/2019",
-  "type" => "Aerobic"
+  "type" => "Aerobic",
+  "capacity" => "10"
   })
 
 event1.save()
@@ -20,7 +21,8 @@ event2 = Event.new({
   "title" => "Spin Mania",
   "time_slot" => "18:00",
   "event_date" => "08/01/2019",
-  "type" => "Aerobic"
+  "type" => "Aerobic",
+  "capacity" => "10"
   })
 
 event2.save()
@@ -29,7 +31,8 @@ event3 = Event.new({
   "title" => "Body Pump",
   "time_slot" => "17:30",
   "event_date" => "09/01/2019",
-  "type" => "Strength"
+  "type" => "Strength",
+  "capacity" => "10"
   })
 
 event3.save()
@@ -38,7 +41,8 @@ event4 = Event.new({
   "title" => "Yoga: Beginners",
   "time_slot" => "19:00",
   "event_date" => "09/01/2019",
-  "type" => "Flexibility"
+  "type" => "Flexibility",
+  "capacity" => "10"
   })
 
 event4.save()
@@ -47,7 +51,8 @@ event5 = Event.new({
   "title" => "Yoga: Pro",
   "time_slot" => "18:00",
   "event_date" => "10/01/2019",
-  "type" => "Flexibility"
+  "type" => "Flexibility",
+  "capacity" => "10"
   })
 
 event5.save()
