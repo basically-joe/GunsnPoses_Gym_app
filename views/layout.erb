@@ -2,31 +2,36 @@
 <html>
 <head>
   <link rel="stylesheet" type="text/css" href="css/layout.css">
+  <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,300italic' rel='stylesheet' type='text/css'>
   <!-- Auto data refresh on pages, may or may not activate -->
   <!-- <META HTTP-EQUIV="refresh" CONTENT="15"> -->
   <title>Guns N' Poses</title>
 </head>
 <body>
-<main class="flex flex--row">
-  <nav>
-    <ul>
-      <li>
-        <a href="/">Home</a>
-      </li>
-      <li>
-        <a href="/events">Classes</a>
-      </li>
-      <li>
-        <a href="/clients">Clients</a>
-      </li>
-      <li>
-        <a href="/bookings/new">Quick booking</a>
-      </li>
-    </ul>
-  </nav>
+  <header class="navbar">
+    <nav>
+      <div class="row">
+        <div>
+          <ul class="main-nav">
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <a href="/events">Classes</a>
+            </li>
+            <li>
+              <a href="/clients">Clients</a>
+            </li>
+            <li>
+              <a href="/bookings/new">Quick booking</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
   <section id="content">
-  <%= yield %>
+    <%= yield %>
   </section>
-  </main>
 </body>
 </html>

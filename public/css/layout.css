@@ -1,3 +1,5 @@
+/* Overall css styling for body / html */
+
 html,
 body {
     background-color: #fff;
@@ -7,4 +9,54 @@ body {
     font-size: 20px;
     text-rendering: optimizeLegibility;
     overflow-x: hidden;
+}
+
+/* navigation pain */
+
+.navbar {
+    background-image: url(/Users/joemccoll/Desktop/Website_Joe/vendors/images/design.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 5vh;
+    background-attachment: fixed;
+}
+
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+nav {
+  background-color: #333;
+  font-size: 80%;
+  color: #ddd;
+  border-bottom: 2px;
+}
+
+.main-nav {
+    list-style: none;
+    float: left;
+}
+
+.main-nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.main-nav li:last-child {
+    margin-right: 0;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+    text-decoration: none;
+    border: 0;
+    color: #ddd;
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+    color: #888;
 }
