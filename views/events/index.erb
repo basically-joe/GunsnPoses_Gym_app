@@ -25,10 +25,10 @@
         <td><%= event.type() %></td>
         <td><%= event.capacity() %></td>
         <td><a href="/events/<%= event.id() %>/edit"><button type="button">Edit</button></a></td>
-        <td><form action="/events/<%= event.id() %>/delete" method="POST"><input type="submit" value="Delete"></form></td>
+        <td><form action="/events/<%= event.id() %>/delete" method="POST"><p class="btn--wrapper"><input type="submit" class="btn btn--action" value="Delete"></p></form></td>
       </tr>
       <% end %>
     </tbody>
   </table>
 </div>
-  <a href="/events/new"><button type="button" class="button4">Add a new class</button></a>
+  <a href="/events/new"><button type="button">Add a new class</button></a>
