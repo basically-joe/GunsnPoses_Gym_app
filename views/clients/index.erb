@@ -18,8 +18,8 @@
           </div>
         </td>
         <td><%= client.age() %></td>
-        <td><a href="/clients/<%= client.id() %>/edit"><button type="button">Edit</button></a></td>
-        <td><form action="/clients/<%= client.id() %>/delete" method="POST"><input type="submit" value="Delete"></form></td>
+        <td><a href="/clients/<%= client.id() %>/edit" class="btn">Edit</a></td>
+        <td><form action="/clients/<%= client.id() %>/delete" method="POST"><input type="submit" value="Delete" class="btn"></form></td>
       </tr>
       <% end %>
     </tbody>
@@ -49,7 +49,7 @@
 </div>
 
 <div class="form-elements">
-  <input type='submit' value="Add new client">
+  <input type='submit' value="Add new client" class="btn">
 </div>
 
   </div>

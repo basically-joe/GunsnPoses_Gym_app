@@ -24,8 +24,8 @@
         <td><%= event.time_slot() %></td>
         <td><%= event.type() %></td>
         <td><%= event.capacity() %></td>
-        <td><a href="/events/<%= event.id() %>/edit"><button type="button">Edit</button></a></td>
-        <td><form action="/events/<%= event.id() %>/delete" method="POST"><p class="btn--wrapper"><input type="submit" class="btn btn--action" value="Delete"></p></form></td>
+        <td><a href="/events/<%= event.id() %>/edit" class="btn">Edit</a></td>
+        <td><form action="/events/<%= event.id() %>/delete" method="POST"><input type="submit" class="btn" value="Delete"></form></td>
       </tr>
       <% end %>
     </tbody>
@@ -63,7 +63,7 @@
   </div>
 
   <div class="form-elements">
-    <input type='submit' value="Add new class">
+    <input type='submit' class="btn" value="Add new class" required="required">
   </div>
 
     </div>

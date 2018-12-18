@@ -1,6 +1,8 @@
 <div class="form-booking">
 <h2>Add client to a class</h2>
 <form action="/bookings" method="post">
+  <div class="form-wrapper">
+    <div class="form-elements">
   <label>
   Select a class:
     <select name="event_id">
@@ -9,7 +11,8 @@
       <% end %>
     </select>
   </label>
-
+  </div>
+  <div class="form-elements">
   <label>
     Select a client:
     <select name="client_id">
@@ -18,7 +21,10 @@
       <% end %>
     </select>
   </label>
-
-  <input class="btn btn--action" type='submit' value="Update the class register">
+  </div>
+  <div class="form-elements">
+  <input class="btn" type='submit' value="Update the class register">
+</div>
+</div>
 </form>
 </div>
