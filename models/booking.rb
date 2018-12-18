@@ -8,8 +8,8 @@ class Booking
 
   def initialize(options)
     @id = options['id'].to_i if options['id']
-    @event_id = options['event_id'].to_i
-    @client_id = options['client_id'].to_i
+    @event_id = options['event_id'].to_i options['event_id']
+    @client_id = options['client_id'].to_i options['client_id']
   end
 
   def save()
