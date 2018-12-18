@@ -16,9 +16,10 @@ height: 300px;
 
 /* events form */
 
-/* .form--events h2{
-  text-align:center;
-} */
+.form--events h2{
+  /* text-align:center; */
+	margin-bottom:10px;
+}
 
 .form--events {
 	width: 300px;
