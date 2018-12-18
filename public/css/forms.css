@@ -1,17 +1,73 @@
-.form {
+/* add new form */
+
+.form{
+	width: 300px;
+height: 300px;
 	position:absolute;
 	top: 35%;
 	left: 80%;
 	transform: translate(-50%, -50%);
-  padding: 5px;
+	padding: 10px;
+	/* margin: 50px; */
 	font-size: 80%;
+	border-radius: 5px;
+	border: solid 1px #fff;
 }
+
+/* events form */
+
+/* .form--events h2{
+  text-align:center;
+} */
+
+.form--events {
+	width: 300px;
+height: 300px;
+	position:absolute;
+	top: 35%;
+	left: 80%;
+	transform: translate(-50%, -50%);
+	padding: 10px;
+	/* margin: 50px; */
+	font-size: 80%;
+	/* border-radius: 5px; */
+	/* border: solid 1px #fff; */
+}
+
+.form--events input  {
+  border:none;
+  outline:none;
+  display:inline-block;
+  height:34px;
+  vertical-align:middle;
+  position:relative;
+  bottom:14px;
+  right:9px;
+  border-radius:22px;
+  width:220px;
+  box-sizing:border-box;
+  padding:0 18px;
+}
+
+.form--events .form-elements{
+    margin-bottom:22px;
+    display:inline-block;
+}
+
+.form--events .form-elements:last-child{
+   margin-bottom:-11px;
+}
+
+/* booking form */
 
 .form-booking {
 	position:absolute;
 	top: 35%;
 	left: 24%;
 	transform: translate(-50%, -50%);
-  padding: 5px;
+	padding: 10px;
+	/* margin: 50px; */
 	font-size: 80%;
+	border-radius: 5px;
+	border: solid 1px #fff;
 }
