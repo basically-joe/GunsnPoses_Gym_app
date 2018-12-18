@@ -8,8 +8,7 @@
 
 html,
 body {
-  /* background-image: url(/Users/joemccoll/codeclan_work/ruby_project_solo/gym_code/public/images/back_right_orientation.jpg); */
-  /* background: linear-gradient(45deg, #49a09d, #5f2c82); */
+  /* background-image: url("/images/Background_hero_text.png"); */
   color: #fff;
   font-family: 'Lato', 'Arial', sans-serif;
   font-weight: 300;
@@ -19,11 +18,10 @@ body {
 }
 
 header {
-    background-image: url("/images/Background_hero_text.png");
-    background-size: cover;
-    background-position:bottom;
-    height: 110vh;
-    /* background-attachment: fixed; */
+  background: linear-gradient(45deg, #49a09d, #5f2c82);
+  background-position:center;
+  height: 100vh;
+  background-attachment: fixed;
 }
 
 .hero-text-box {
@@ -57,10 +55,10 @@ nav {
   transition: color 0.2s;
 }
 
-  .hyperlink a:hover,
-  .hyperlink a:active {
-    color: #fff;
-  }
+.hyperlink a:hover,
+.hyperlink a:active {
+  color: #fff;
+}
 
 .main-nav {
   list-style: none;
