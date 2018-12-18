@@ -73,9 +73,9 @@ class Booking
     end
 
     def book_class(booking)
-      return unless @capacity > 0
-      class_capacity_update()
-      Booking.new('event_id' => @id, 'client_id' => client.id).save()
+      return unless event.capacity > 0
+      event.class_capacity_update()
+      Booking.new('event_id' => @event_id, 'client_id' => @client_id).save()
       update()
     end
 
