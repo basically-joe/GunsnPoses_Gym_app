@@ -75,13 +75,20 @@ class Event
       return client_data.map{ |client| Client.new(client) }
     end
 
-    def event_count() # e.g. event5.event_count
-      return clients.count
+    # def event_count() # e.g. event5.event_count
+    #   return clients.count
+    # end
+
+    def class_capacity_update()
+      @capacity -=1
+      update()
     end
 
-    def class_booked()
-        @capacity -=1
-        update
+    def book_class(booking)
+      return unless @capacity > 0
+      class_capacity_update()
+      Booking.new('event_id' => @id, 'client_id' => client.id).save()
+      update()
     end
 
     def delete() # e.g. event1.delete
