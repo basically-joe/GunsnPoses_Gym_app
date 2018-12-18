@@ -19,11 +19,11 @@ body {
 }
 
 header {
-    background-image: url("/images/back_right_orientation.jpg");
+    background-image: url("/images/Background_hero_text.png");
     background-size: cover;
-    background-position: center;
-    height: 95vh;
-    background-attachment: fixed;
+    background-position:bottom;
+    height: 110vh;
+    /* background-attachment: fixed; */
 }
 
 .hero-text-box {
