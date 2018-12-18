@@ -1,1 +1,25 @@
+<h1>Guns N' Poses</h1>
+<div class="form-booking">
+<h2>Add client to a class</h2>
+<form action="/bookings" method="post">
+  <label>
+  Select a class:
+    <select name="event_id">
+      <% for event in @events %>
+      <option value="<%= event.id %>"><%= event.title %></option>
+      <% end %>
+    </select>
+  </label>
 
+  <label>
+    Select a client:
+    <select name="client_id">
+      <% for client in @clients %>
+      <option value="<%= client.id %>"><%= client.format_name %></option>
+      <% end %>
+    </select>
+  </label>
+
+  <input class="btn btn--action" type='submit' value="Update the class register">
+</form>
+</div>
