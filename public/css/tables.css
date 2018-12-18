@@ -3,6 +3,7 @@
 	top: 65%;
 	left: 30%;
 	transform: translate(-50%, -50%);
+	border-radius: 5px;
 }
 
 table {
@@ -24,20 +25,17 @@ th {
 	text-align: left;
 }
 
-thead {
-	th {
+thead, th {
 		background-color: #55608f;
 	}
-}
 
 tr:hover {
 		background-color: rgba(255,255,255,0.3);
 	}
 
-	td {
+	/* td:hover,
+	 td:before{
 		position: relative;
-		&:hover {
-			&:before {
 				content: "";
 				position: absolute;
 				left: 0;
@@ -46,9 +44,5 @@ tr:hover {
 				bottom: -9999px;
 				background-color: rgba(255,255,255,0.2);
 				z-index: -1;
-			}
-		}
-	}
-}
 
-tr
+	} */
