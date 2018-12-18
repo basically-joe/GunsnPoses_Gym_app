@@ -1,20 +1,21 @@
 <h2><%= @events.title() %> (max <%= @events.capacity() %>)</h2>
 <div class="tables">
-<table>
-  <thead>
-  <tr>
-    <th>Registered clients</th>
-  </tr>
-  </thead>
-  <tbody>
-  <% @events.clients.each do |client| %>
-  <tr>
-    <td><%= client.format_name %></td>
-  </tr>
-  <% end %>
-</tbody>
-</table>
+  <table>
+    <thead>
+      <tr>
+        <th>Registered clients</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @events.clients.each do |client| %>
+      <tr>
+        <td>
+          <div class="hyperlink">
+            <a href="/clients/<%= client.id() %>"><%= client.format_name %></a>
+          </div>
+        </td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
 </div>
-<!-- <a href="/bookings/new">Add a client to a class</a> -->
-
-<!-- <iframe src="/bookings/new"></iframe> -->
