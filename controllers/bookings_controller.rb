@@ -19,7 +19,7 @@ end
 post '/bookings' do
   booking = Booking.new(params)
   booking.save
-  redirect to("/bookings/new")
+  redirect to("/")
 end
 
 post '/bookings/:id/delete' do
