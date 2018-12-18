@@ -8,7 +8,6 @@
 
 html,
 body {
-  /* background-image: url("/images/Background_hero_text.png"); */
   color: #fff;
   font-family: 'Lato', 'Arial', sans-serif;
   font-weight: 300;
@@ -17,7 +16,12 @@ body {
   overflow-x: hidden;
 }
 
+h2 {
+  padding: 20px;
+}
+
 header {
+  /* background-image: url("/images/Background_hero_text.png"); */
   background: linear-gradient(45deg, #49a09d, #5f2c82);
   background-position:center;
   height: 100vh;
