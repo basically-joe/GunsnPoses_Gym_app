@@ -8,8 +8,8 @@ class Booking
 
   def initialize(options)
     @id = options['id'].to_i if options['id']
-    @event_id = options['event_id'].to_i options['event_id']
-    @client_id = options['client_id'].to_i options['client_id']
+    @event_id = options['event_id'].to_i if options['event_id']
+    @client_id = options['client_id'].to_i if options['client_id']
   end
 
   def save()
@@ -27,12 +27,6 @@ class Booking
     results = SqlRunner.run(sql, values)
     @id = results.first()['id'].to_i
   end
-
-  # def book_if_capacity
-  #     if event.event_has_capacity() == true
-  #       save()
-  #     end
-  # end
 
   def self.all()
     sql = "SELECT * FROM bookings"
