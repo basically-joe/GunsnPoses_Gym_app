@@ -72,6 +72,13 @@ class Booking
       return Client.new( results.first )
     end
 
+    def book_class(booking)
+      return unless @capacity > 0
+      class_capacity_update()
+      Booking.new('event_id' => @id, 'client_id' => client.id).save()
+      update()
+    end
+
     def delete() # e.g. booking1.delete
       sql = "DELETE FROM events
       WHERE id = $1"
