@@ -11,28 +11,22 @@
 	height: 300px;
 	position:absolute;
 	top: 35%;
-	left: 20%;
+	left: 22%;
 	transform: translate(-50%, -50%);
 	padding: 10px;
-	/* margin: 50px; */
 	font-size: 100%;
 	/* border-radius: 5px; */
 	/* border: solid 1px #fff; */
 }
 
-.form--booking option  {
-	border:none;
-	outline:none;
-	display:inline-block;
-	height:34px;
-	vertical-align:middle;
-	position:relative;
-	bottom:14px;
-	right:9px;
-	border-radius:22px;
+.form--booking select {
+	font-family: Lato;
+	margin: 5px;
+	height:32px;
+	border-radius:20px;
 	width:220px;
-	box-sizing:border-box;
-	padding:0 18px;
+	font-size: 80%;
+	color: #333333;
 }
 
 .form--booking .form-elements{
