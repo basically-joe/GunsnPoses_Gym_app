@@ -3,7 +3,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
 }
 
 html,
@@ -14,6 +14,7 @@ body {
   font-size: 20px;
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
+  z-index: 1;
 }
 
 h2 {
@@ -21,19 +22,13 @@ h2 {
 }
 
 header {
-  /* background-image: url("/images/Background_hero_text.png"); */
   background: linear-gradient(45deg, #49a09d, #5f2c82);
   background-position:center;
   height: 100vh;
   background-attachment: fixed;
+  z-index: -1;
 }
 
-.hero-text-box {
-  padding: 250px 80px 40px 200px;
-  text-align: left;
-  color: #ffffff;
-  font-size: 160%;
-}
 
 section {
   padding: 10px 0;
@@ -46,6 +41,7 @@ nav {
   font-size: 95%;
   color: #ddd;
   padding: 60px;
+  z-index: 1;
 }
 
 /* hyperlinkable text */
@@ -90,4 +86,14 @@ nav {
 .main-nav li a:hover,
 .main-nav li a:active {
   color: #888;
+}
+
+.logo {
+  position: absolute;
+  top: 80%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  opacity: 0.3;
+  z-index: 2;
 }
