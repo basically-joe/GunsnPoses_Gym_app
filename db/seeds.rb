@@ -12,7 +12,7 @@ event1 = Event.new({
   "time_slot" => "09:00",
   "event_date" => "07/01/2019",
   "type" => "Aerobic",
-  "capacity" => "10"
+  "capacity" => "3"
   })
 
 event1.save()
@@ -152,6 +152,13 @@ booking6 = Booking.new({
    })
 
 booking6.save()
+
+booking7 = Booking.new({
+  "event_id" => event5.id,
+  "client_id" => client6.id
+   })
+
+booking7.save()
 
 # booking6.event_id = event1.id
 # booking6.update
