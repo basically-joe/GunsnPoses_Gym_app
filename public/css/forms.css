@@ -60,7 +60,8 @@
 	/* border: solid 1px #fff; */
 }
 
-.form--edit input  {
+.form--edit input[type="text"],
+  .form--edit input[type="number"]{
 	border:none;
 	outline:none;
 	display:inline-block;
@@ -73,6 +74,9 @@
 	width:220px;
 	box-sizing:border-box;
 	padding:0 18px;
+	font-family: Lato;
+	font-size: 80%;
+	color: #333333;
 }
 
 .form--edit .form-elements{
