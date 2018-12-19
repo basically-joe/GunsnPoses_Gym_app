@@ -14,7 +14,6 @@ body {
   font-size: 20px;
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
-  z-index: 1;
 }
 
 h2 {
@@ -26,7 +25,6 @@ header {
   background-position:center;
   height: 100vh;
   background-attachment: fixed;
-  z-index: -1;
 }
 
 
@@ -41,7 +39,6 @@ nav {
   font-size: 95%;
   color: #ddd;
   padding: 60px;
-  z-index: 1;
 }
 
 /* hyperlinkable text */
@@ -95,5 +92,4 @@ nav {
   transform: translate(-50%, -50%);
   padding: 10px;
   opacity: 0.3;
-  z-index: 2;
 }
