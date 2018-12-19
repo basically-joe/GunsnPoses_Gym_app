@@ -1,25 +1,25 @@
-<div class="form-booking">
-<h2>Update <%= @clients.format_name %>:</h2>
+<div class="form--events">
+<h2>Update <%= @clients.format_name %></h2>
 <form action="/clients/<%= @clients.id %>" method="post">
   <div class="form-wrapper">
 
 <div class="form-elements">
-  <label for="first_name">First name:</label>
-  <input type="text" name="first_name" id="first_name" value="<%= @clients.first_name %>" required>
+  <!-- <label for="first_name">First name:</label> -->
+  <input type="text" name="first_name" id="first_name" value="<%= @clients.first_name %>" required/>
 </div>
 
 <div class="form-elements">
-  <label for="last_name">Last name:</label>
-  <input type="text" name="last_name" id="last_name" value="<%= @clients.last_name %>" required>
+  <!-- <label for="last_name">Last name:</label> -->
+  <input type="text" name="last_name" id="last_name" value="<%= @clients.last_name %>" required/>
 </div>
 
 <div class="form-elements">
-  <label for="age">Age:</label>
-  <input type="number" name="age" id="age" value="<%= @clients.age %>" required>
+  <!-- <label for="age">Age:</label> -->
+  <input type="number" name="age" id="age" value="<%= @clients.age %>" required/>
 </div>
 
 <div class="form-elements">
-  <input type='submit' value="Update client details" class="btn">
+  <input type='submit' value="Update client info" class="btn">
 </div>
 
   </div>
