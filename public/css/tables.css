@@ -1,3 +1,6 @@
+/* multiple row table formatting */
+
+
 .tables {
 	position:absolute;
 	top: 50%;
@@ -5,6 +8,8 @@
 	transform: translate(-50%, -50%);
 	border-radius: 5px;
 }
+
+/* single row table formatting */
 
 .tables--onerow {
 	position:absolute;
@@ -14,6 +19,8 @@
 	transform: translate(-50%, -50%);
 	border-radius: 5px;
 }
+
+/* generic table formatting */
 
 table {
 	width:auto;

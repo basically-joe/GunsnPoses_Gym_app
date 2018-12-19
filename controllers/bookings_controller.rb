@@ -1,4 +1,5 @@
 require( 'sinatra' )
+require( 'pry' )
 require( 'sinatra/contrib/all' )
 require_relative( '../models/booking' )
 require_relative( '../models/client' )
@@ -17,10 +18,20 @@ get '/bookings/new' do
 end
 
 post '/bookings' do
-  booking = Booking.new(params)
-  booking.save
-  redirect to("/")
+  event = Event.find(params['event_id'])
+  client = Client.find(params['client_id'])
+  if !event.is_full?()
+    event.update_class_capacity()
+    booking = Booking.new(params)
+    booking.save
+    redirect to("/")
+    binding.pry
+  else
+    redirect to("/bookings/error")
+  end
 end
+
+
 
 post '/bookings/:id/delete' do
   booking = Booking.find(params['id'].to_i)

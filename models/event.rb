@@ -75,11 +75,11 @@ class Event
       return client_data.map{ |client| Client.new(client) }
     end
 
-    # def event_count() # e.g. event5.event_count
-    #   return clients.count
-    # end
+    def is_full?()
+      return @capacity <= 0
+    end
 
-    def class_capacity_update()
+    def update_class_capacity()
       @capacity -=1
       update()
     end
