@@ -31,7 +31,10 @@ post '/bookings' do
   end
 end
 
-
+get '/bookings/error' do
+  @bookings = Booking.all
+  erb(:"bookings/error")
+end
 
 post '/bookings/:id/delete' do
   booking = Booking.find(params['id'].to_i)
