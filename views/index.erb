@@ -1,27 +1,33 @@
 <!-- <div class="hero-text">
-  <h1>Guns N' Poses</h1>
+<h1>Guns N' Poses</h1>
 </div> -->
-<div class="form-booking">
+<div class="form--booking">
   <h2>Quick booking</h2>
   <form action="/bookings" method="post">
-    <label>
-      Select class:
+    <!-- <div class="form-elements">
+      <label>Select class:</label><br>
+    </div> -->
+    <div class="form-elements">
       <select name="event_id">
         <% for event in @events %>
         <option value="<%= event.id %>"><%= event.title %></option>
         <% end %>
       </select>
-    </label>
+    </div>
 
-    <label>
-      Select client:
+    <!-- <div class="form-elements">
+      <label>Select client:</label><br>
+    </div> -->
+    <div class="form-elements">
       <select name="client_id">
         <% for client in @clients %>
         <option value="<%= client.id %>"><%= client.format_name %></option>
         <% end %>
       </select>
-    </label>
+    </div>
 
-    <input class="btn" type='submit' value="Update the class register">
+    <div class="form-elements">
+      <input class="btn" type='submit' value="Save booking">
+    </div>
   </form>
 </div>
