@@ -1,14 +1,9 @@
-<h2><%= @clients.format_name() %> info</h2>
-
-<p>First name: <%= @clients.first_name.capitalize %></p>
-<p>Last name: <%= @clients.last_name.capitalize %></p>
-<p>Age: <%= @clients.age %></p>
-
 <div class="tables--onerow">
+  <h2><%= @clients.format_name() %> info</h2>
   <table>
     <thead>
       <tr>
-        <th>Booked classes</th>
+        <th><%= @clients.first_name.capitalize %> <%= @clients.last_name.capitalize %> (<%= @clients.age %>)</th>
       </tr>
     </thead>
     <tbody>
