@@ -1,23 +1,54 @@
-/* add new form */
+/* edit current clients form */
 
-.form{
+.form--edit h2{
+  /* text-align:center; */
+	margin-top: 20px;
+	margin-bottom:10px;
+}
+
+.form--edit {
 	width: 300px;
 height: 300px;
 	position:absolute;
 	top: 35%;
-	left: 80%;
+	left: 20%;
 	transform: translate(-50%, -50%);
 	padding: 10px;
 	/* margin: 50px; */
 	font-size: 80%;
-	border-radius: 5px;
-	border: solid 1px #fff;
+	/* border-radius: 5px; */
+	/* border: solid 1px #fff; */
 }
 
-/* events form */
+.form--edit input  {
+  border:none;
+  outline:none;
+  display:inline-block;
+  height:34px;
+  vertical-align:middle;
+  position:relative;
+  bottom:14px;
+  right:9px;
+  border-radius:22px;
+  width:220px;
+  box-sizing:border-box;
+  padding:0 18px;
+}
+
+.form--edit .form-elements{
+    margin-bottom:22px;
+    display:inline-block;
+}
+
+.form--edit .form-elements:last-child{
+   margin-bottom:-11px;
+}
+
+/* Adding new clients or events form - roght align */
 
 .form--events h2{
   /* text-align:center; */
+	margin-top: 20px;
 	margin-bottom:10px;
 }
 
@@ -57,18 +88,4 @@ height: 300px;
 
 .form--events .form-elements:last-child{
    margin-bottom:-11px;
-}
-
-/* booking form */
-
-.form-booking {
-	position:absolute;
-	top: 35%;
-	left: 24%;
-	transform: translate(-50%, -50%);
-	padding: 10px;
-	/* margin: 50px; */
-	font-size: 80%;
-	border-radius: 5px;
-	border: solid 1px #fff;
 }
